@@ -1,3 +1,4 @@
+// DELETE THIS FILE
 import clsx from "clsx";
 
 export function Prose({
@@ -12,9 +13,7 @@ export function Prose({
       className={clsx(
         "prose max-w-none",
         className,
-        // Force all text inside to be black in light mode, white in dark
         "[&]:text-black dark:[&]:text-white",
-        // Also force nested elements to inherit
         "[&_*]:text-black dark:[&_*]:text-white"
       )}
     >

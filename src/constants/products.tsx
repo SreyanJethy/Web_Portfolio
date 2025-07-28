@@ -41,7 +41,7 @@ export const products: Product[] = [
         </p>
         <p>
           Built with a MERN stack, it supports user roles, secure login,
-          performance graphs, and admin control panels. It's scalable and
+          performance graphs, and admin control panels. It&apos;s scalable and
           designed for intuitive use.
         </p>
       </div>

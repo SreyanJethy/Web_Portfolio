@@ -10,6 +10,12 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+    experimental: {
+    mdxRs: true,
+  },
+  // Disable built-in font optimization
+  optimizeFonts: false,
+
 };
 
 const withMDX = nextMDX({
