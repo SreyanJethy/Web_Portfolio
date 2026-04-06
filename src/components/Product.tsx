@@ -52,37 +52,38 @@ export default function Products() {
   return (
     <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 p-4">
       {products.map((product, index) => (
-        <Link href={`/projects/${product.slug}`} key={index}>
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 transition-transform hover:scale-105 cursor-pointer">
-            <div className="relative w-full h-[200px] mb-4">
-              <Image
-                src={product.image}
-                alt={product.title}
-                fill
-                className="rounded-md object-cover"
-                priority
-              />
+        <div key={index}>
+          <Link href={`/projects/${product.slug}`}>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 transition-transform hover:scale-105 cursor-pointer">
+              <div className="relative w-full h-[200px] mb-4">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="rounded-md object-cover"
+                  priority
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {product.description}
+              </p>
+              <span className="text-blue-500 hover:underline">
+                View Project →
+              </span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              {product.description}
-            </p>
-            {product.liveUrl && (
-              <a
-                href={product.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-500 hover:underline block mb-2"
-                onClick={(e) => e.stopPropagation()}
-              >
-                Live Site →
-              </a>
-            )}
-            <span className="text-blue-500 hover:underline">
-              View Project →
-            </span>
-          </div>
-        </Link>
+          </Link>
+          {product.liveUrl && (
+            <a
+              href={product.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 hover:underline block mt-2 text-sm"
+            >
+              Live Site →
+            </a>
+          )}
+        </div>
       ))}
     </section>
   );
