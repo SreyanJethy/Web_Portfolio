@@ -13,6 +13,7 @@ interface Product {
   description: string;
   image: StaticImageData;
   slug: string;
+  liveUrl?: string;
 }
 
 const products: Product[] = [
@@ -31,12 +32,13 @@ const products: Product[] = [
     slug: "vidya-netra",
   },
   {
-    title: "SideKick",
-    description:
-      "A smart companion discovery platform for movies, outings, events, and social activities with intelligent matching and real-time interaction.",
-    image: sideKickImage,
-    slug: "sidekick",
-  },
+  title: "SideKick",
+  description:
+    "A smart companion discovery platform for movies, outings, events, and social activities with intelligent matching and real-time interaction.",
+  liveUrl: "https://sidekick.buzz",
+  image: sideKickImage,
+  slug: "sidekick",
+},
   {
     title: "Serenity AI",
     description:
