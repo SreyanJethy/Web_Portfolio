@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sreyan Jethy | Portfolio", // "John Doe - Developer",
+  title: "Sreyan Jethy | Backend & Full-Stack Engineer",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Sreyan Jethy is a Computer Science Engineer specializing in Python backend development, REST APIs, MERN stack, and AI-integrated applications.",
 };
 
 export default function RootLayout({
@@ -24,15 +24,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={twMerge(
-          inter.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100"
-        )}
+        className={twMerge(inter.className, "antialiased")}
+        style={{ backgroundColor: "var(--bg-primary)", overflowX: "hidden" }}
       >
+        {/*
+          Root grid: sidebar (fixed, off-flow) + scrollable main.
+          On desktop the sidebar is fixed-position so we push main
+          content right with a left margin equal to sidebar width.
+          On mobile the sidebar overlays, so no margin needed.
+        */}
         <Sidebar />
-        <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
-          <div className="flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
-            {children}
+
+        <div
+          className="lg:ml-[13.5rem] min-h-screen flex flex-col"
+          style={{ backgroundColor: "var(--bg-primary)" }}
+        >
+          {/* Inner surface — the "page card" */}
+          <div
+            className="flex-1 flex flex-col lg:m-2 lg:rounded-xl overflow-hidden"
+            style={{
+              backgroundColor: "var(--bg-secondary)",
+              border: "1px solid var(--border-subtle)",
+              minHeight: "calc(100vh - 16px)",
+            }}
+          >
+            <main className="flex-1">
+              {children}
+            </main>
             <Footer />
           </div>
         </div>

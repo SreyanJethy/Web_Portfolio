@@ -1,31 +1,35 @@
 import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
 import { Metadata } from "next";
-import Image from "next/image";
-
-import { motion } from "framer-motion";
 import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: "About | John Doe",
+  title: "About | Sreyan Jethy — Backend Engineer",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Sreyan Jethy is a Computer Science Engineer specializing in Python, MERN stack, REST APIs, and scalable backend systems.",
 };
 
 export default function AboutPage() {
-  const images = [
-    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  ];
   return (
     <Container>
-      <span className="text-4xl">💬</span>
-      <Heading className="font-black">About Me</Heading>
+      {/* Page header */}
+      <div className="mb-12">
+        <p
+          className="text-[11px] font-bold uppercase tracking-[0.12em] mb-2"
+          style={{ color: "var(--text-muted)" }}
+        >
+          Who I Am
+        </p>
+        <h1
+          className="text-3xl md:text-4xl font-black leading-tight mb-3"
+          style={{ color: "var(--text-primary)" }}
+        >
+          About Me
+        </h1>
+        <p className="text-sm max-w-lg leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+          Backend engineer. Full-stack builder. Problem solver. Here&apos;s my story.
+        </p>
+      </div>
+
       <About />
     </Container>
   );

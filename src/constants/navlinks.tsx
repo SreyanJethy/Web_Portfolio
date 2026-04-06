@@ -4,6 +4,7 @@ import {
   IconBriefcase2,
   IconMail,
   IconMessage2,
+  IconCode,
 } from "@tabler/icons-react";
 
 export const navlinks = [

@@ -14,28 +14,35 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "var(--neutral-700)",
-        secondary: "var(--neutral-500)",
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        "bg-primary": "var(--bg-primary)",
+        "bg-secondary": "var(--bg-secondary)",
+        "bg-card": "var(--bg-card)",
+        "accent-purple": "var(--accent-purple)",
+        "accent-blue": "var(--accent-blue)",
+        "accent-cyan": "var(--accent-cyan)",
+        "accent-green": "var(--accent-green)",
+      },
+      animation: {
+        float: "float 4s ease-in-out infinite",
+        "float-delayed": "float-delayed 5s ease-in-out infinite 1s",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },
     },
   },
   plugins: [require("@tailwindcss/typography"), addVariablesForColors],
 } satisfies Config;
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
-  addBase({
-    ":root": newVars,
-  });
+  addBase({ ":root": newVars });
 }
 
 export default config;

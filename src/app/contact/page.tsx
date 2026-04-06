@@ -1,27 +1,20 @@
 import { Contact } from "@/components/Contact";
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact | John Doe",
-  description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+  title: "Contact | Sreyan Jethy — Backend Engineer",
+  description: "Get in touch with Sreyan Jethy for internships, freelance projects, or collaborations.",
 };
 
-export default function Projects() {
+export default function ContactPage() {
   return (
     <Container>
-      <span className="text-4xl">✉️</span>
-      <Heading className="font-black mb-2">Contact Me</Heading>
-      <Paragraph className="mb-10 max-w-xl">
-        Reach out to me over email or fill up this contact form. I will get back
-        to you ASAP - I promise.{" "}
-      </Paragraph>
+      <Heading className="font-black mb-2">Get In Touch</Heading>
+      <p className="text-sm mb-8 max-w-lg" style={{ color: "var(--text-secondary)" }}>
+        Open to internships, placements, and freelance projects. I&apos;ll get back to you within 24 hours.
+      </p>
       <Contact />
     </Container>
   );
