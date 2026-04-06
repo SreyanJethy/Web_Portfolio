@@ -1,31 +1,35 @@
 import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
-import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs | John Doe",
+  title: "Articles | Sreyan Jethy — Backend Engineer",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Technical articles on backend engineering, REST APIs, MERN stack, Python, MongoDB, and scalable system design.",
 };
 
-export default async function Blog() {
-  const blogs = await getAllBlogs();
-  const data = blogs.map(({ component, ...meta }) => meta);
-
+export default function BlogPage() {
   return (
     <Container>
-      <span className="text-4xl">📝</span>
-      <Heading className="font-black pb-4">I write about technology</Heading>
-      <Paragraph className="pb-10">
-        Ever since <Highlight> I was a kid</Highlight>, I&apos;ve been
-        fascinated by technology.
-      </Paragraph>
-      <Blogs blogs={data} />
+      <div className="mb-2">
+        <p
+          className="text-[11px] font-bold uppercase tracking-[0.12em] mb-2"
+          style={{ color: "var(--text-muted)" }}
+        >
+          Technical Writing
+        </p>
+        <h1
+          className="text-3xl md:text-4xl font-black leading-tight mb-3"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Articles
+        </h1>
+        <p className="text-sm max-w-lg leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+          Deep dives into backend engineering, API design, database architecture,
+          and full-stack development patterns.
+        </p>
+      </div>
+      <Blogs />
     </Container>
   );
 }
