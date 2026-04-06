@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import springBootImage from "@/assets/images/SpringBoot_api.png";
 import vidyaNetraImage from "@/assets/images/VidyaNetra.png";
+import sideKickImage from "@/assets/images/sidekick.png";
+import serenityAIImage from "@/assets/images/serenity-ai.png";
 
 interface Product {
   title: string;
@@ -26,7 +28,21 @@ const products: Product[] = [
     description:
       "An educational analytics platform that delivers real-time insights for learners and instructors.",
     image: vidyaNetraImage,
-    slug: "vidyanetra",
+    slug: "vidya-netra",
+  },
+  {
+    title: "SideKick",
+    description:
+      "A smart companion discovery platform for movies, outings, events, and social activities with intelligent matching and real-time interaction.",
+    image: sideKickImage,
+    slug: "sidekick",
+  },
+  {
+    title: "Serenity AI",
+    description:
+      "An AI-powered mental health first-response platform offering crisis detection, emotional support, and real-time psychological first-aid.",
+    image: serenityAIImage,
+    slug: "serenity-ai",
   },
 ];
 

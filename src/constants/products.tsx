@@ -62,4 +62,89 @@ export const products: Product[] = [
       </div>
     ),
   },
+  {
+  href: "https://github.com/SreyanJethy/sidekick",
+  liveUrl: "",
+  title: "SideKick — Smart Companion Discovery Platform",
+  description:
+    "A full-stack social discovery platform that helps users find compatible companions for outings, movies, events, and activities using intelligent matching and real-time interaction.",
+  thumbnail: "/images/sidekick.png",
+  images: ["/images/sidekick.png"],
+  stack: [
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Socket.IO",
+    "React",
+    "Next.js",
+    "REST API"
+  ],
+  highlights: [
+    "Smart Matching Engine",
+    "JWT Auth",
+    "Secure User Profiles",
+    "Real-Time Chat APIs",
+    "Input Validation",
+    "Error Handling",
+    "Scalable REST Architecture"
+  ],
+  slug: "sidekick",
+  content: (
+    <div>
+      <p>
+        <strong>Challenge:</strong> Build a scalable and maintainable full-stack social discovery platform that helps users find like-minded companions for activities such as movies, outings, and events, while ensuring secure authentication, real-time communication, and smooth user experience.
+      </p>
+      <p>
+        <strong>Solution:</strong> Designed a layered backend architecture following the Controller → Service → Repository pattern for clean code separation and scalability. Implemented JWT-based authentication, robust validation, centralized exception handling, and intelligent matching logic based on shared interests and preferences.
+      </p>
+      <p>
+        <strong>Backend Highlights:</strong> RESTful API architecture, real-time chat integration with Socket.IO, secure auth workflows, modular services, optimized user relationship schema, and production-ready scalable backend design.
+      </p>
+    </div>
+  ),
+},
+{
+  href: "https://github.com/SreyanJethy/Serenity-AI",
+  liveUrl: "",
+  title: "Serenity AI — Mental Health First-Response Platform",
+  description:
+    "An AI-powered crisis support platform providing immediate emotional assistance, sentiment analysis, crisis detection, and safe escalation workflows for students and young adults.",
+  thumbnail: "/images/serenity-ai.png",
+  images: ["/images/serenity-ai.png"],
+  stack: [
+    "Node.js",
+    "Express.js",
+    "Firebase",
+    "Gemini API",
+    "NLP",
+    "JWT",
+    "React",
+    "Vite",
+    "REST API"
+  ],
+  highlights: [
+    "AI Sentiment Analysis Pipeline",
+    "3-Tier Crisis Detection",
+    "Secure Authentication",
+    "Mood Tracking APIs",
+    "Error Handling",
+    "Scalable REST Architecture",
+    "Emergency Escalation Workflow"
+  ],
+  slug: "serenity-ai",
+  content: (
+    <div>
+      <p>
+        <strong>Challenge:</strong> Build a scalable AI-powered mental health first-response platform that provides immediate emotional support, detects crisis-level user inputs, and safely escalates emergency cases.
+      </p>
+      <p>
+        <strong>Solution:</strong> Designed a modular backend architecture using Controller → Service → Repository pattern. Integrated sentiment analysis, mood classification, crisis detection engine, and structured authentication workflows for safe user interaction.
+      </p>
+      <p>
+        <strong>Backend Highlights:</strong> AI sentiment analysis pipeline, crisis alert APIs, emergency override workflows, conversation memory flow, mood logging services, and production-ready scalable architecture.
+      </p>
+    </div>
+  ),
+},
 ];
