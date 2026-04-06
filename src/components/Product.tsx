@@ -67,6 +67,17 @@ export default function Products() {
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               {product.description}
             </p>
+            {product.liveUrl && (
+              <a
+                href={product.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 hover:underline block mb-2"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Live Site →
+              </a>
+            )}
             <span className="text-blue-500 hover:underline">
               View Project →
             </span>
